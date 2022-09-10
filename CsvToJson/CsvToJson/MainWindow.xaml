@@ -94,5 +94,15 @@
             🢀
         </Button>
 
+        <TextBlock
+            FontSize="12"
+            Grid.Column="6"
+            Grid.Row="3"
+            HorizontalAlignment="Right"
+            Margin="30 15"
+            Opacity=".5"
+            VerticalAlignment="Bottom">
+            JSaimon ©
+        </TextBlock>
     </Grid>
 </Window>
