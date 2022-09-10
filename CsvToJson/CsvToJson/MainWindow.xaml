@@ -5,8 +5,94 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CsvToJson"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="750" Width="1250">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            FontSize="60"
+            FontWeight="Bold"
+            Grid.Row="0"
+            Grid.ColumnSpan="7"
+            HorizontalAlignment="Center">CONVERTER</TextBlock>
+        
+        <TextBlock
+            FontSize="30"
+            FontWeight="Bold"
+            Foreground="OrangeRed"
+            Grid.Column="1"
+            Grid.Row="1"
+            HorizontalAlignment="Center">CSV</TextBlock>
+        <TextBox
+            x:Name="csvTextBox"
+            AcceptsReturn="True"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.Row="1"
+            Grid.RowSpan="3"
+            Margin="50"
+            TextWrapping="Wrap"
+            VerticalScrollBarVisibility="Auto"/>
+        
+        <TextBlock
+            FontSize="30"
+            FontWeight="Bold"
+            Foreground="DodgerBlue"
+            Grid.Column="5"
+            Grid.Row="1"
+            HorizontalAlignment="Center">JSON</TextBlock>
+        <TextBox
+            x:Name="jsonTextBox"
+            AcceptsReturn="True"
+            Grid.Column="4"
+            Grid.ColumnSpan="3"
+            Grid.Row="1"
+            Grid.RowSpan="3"
+            Margin="50"
+            TextWrapping="Wrap"
+            VerticalScrollBarVisibility="Auto"/>
+
+        <Button
+            x:Name="convertCsvToJsonButton"
+            Background="DodgerBlue"
+            FontSize="40"
+            Foreground="White"
+            Grid.Column="3"
+            Grid.Row="2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Width="70">
+            🢂
+        </Button>
+
+        <Button
+            x:Name="convertJsonToCsvButton"
+            Background="OrangeRed"
+            FontSize="40"
+            Foreground="White"
+            Grid.Column="3"
+            Grid.Row="2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Width="70">
+            🢀
+        </Button>
 
     </Grid>
 </Window>
