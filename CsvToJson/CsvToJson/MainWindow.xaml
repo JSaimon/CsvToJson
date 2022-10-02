@@ -29,7 +29,7 @@
             Grid.Row="0"
             Grid.ColumnSpan="7"
             HorizontalAlignment="Center">CONVERTER</TextBlock>
-        
+
         <TextBlock
             FontSize="30"
             FontWeight="Bold"
@@ -45,6 +45,7 @@
             Grid.Row="1"
             Grid.RowSpan="3"
             Margin="50"
+            Text ="{Binding CsvText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
             TextWrapping="Wrap"
             VerticalScrollBarVisibility="Auto"/>
         
@@ -58,17 +59,20 @@
         <TextBox
             x:Name="jsonTextBox"
             AcceptsReturn="True"
+            AcceptsTab="True"
             Grid.Column="4"
             Grid.ColumnSpan="3"
             Grid.Row="1"
             Grid.RowSpan="3"
             Margin="50"
+            Text ="{Binding JsonText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
             TextWrapping="Wrap"
             VerticalScrollBarVisibility="Auto"/>
 
         <Button
             x:Name="convertCsvToJsonButton"
             Background="DodgerBlue"
+            Click="CheckCsvFormat"
             FontSize="40"
             Foreground="White"
             Grid.Column="3"
