@@ -145,11 +145,12 @@
         /// </summary>
         private void CheckCsvFormat(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(CsvText))
+            if (!string.IsNullOrEmpty(CsvText))
             {
                 // check how many values are in the first line and if the next lines has more, throw warning
                 string[] csvTextRows = CsvText.Split("\r\n");
                 string[] indexRow = csvTextRows[0].Split(',');
+
                 CsvToJson(csvTextRows, indexRow);
             }
             else
